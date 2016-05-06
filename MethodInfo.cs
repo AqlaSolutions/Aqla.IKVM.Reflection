@@ -390,12 +390,12 @@ namespace IKVM.Reflection
 			get { return method.MetadataToken; }
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			return method.GetCurrentToken();
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return method.IsBaked; }
 		}

@@ -209,7 +209,7 @@ namespace IKVM.Reflection.Emit
 			return other.ImportMethodOrField(typeBuilder, name, fieldSig);
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			if (typeBuilder.ModuleBuilder.IsSaved)
 			{
@@ -221,7 +221,7 @@ namespace IKVM.Reflection.Emit
 			}
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return typeBuilder.IsBaked; }
 		}

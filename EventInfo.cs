@@ -29,7 +29,7 @@ namespace IKVM.Reflection
 	public abstract class EventInfo : MemberInfo
 	{
 		// prevent external subclasses
-		internal EventInfo()
+		public EventInfo()
 		{
 		}
 
@@ -45,9 +45,9 @@ namespace IKVM.Reflection
 		public abstract MethodInfo[] GetOtherMethods(bool nonPublic);
 		public abstract MethodInfo[] __GetMethods();
 		public abstract Type EventHandlerType { get; }
-		internal abstract bool IsPublic { get; }
-		internal abstract bool IsNonPrivate { get; }
-		internal abstract bool IsStatic { get; }
+	    protected internal abstract bool IsPublic { get; }
+	    protected internal abstract bool IsNonPrivate { get; }
+	    protected internal abstract bool IsStatic { get; }
 
 		public bool IsSpecialName
 		{
@@ -156,17 +156,17 @@ namespace IKVM.Reflection
 			get { return eventInfo.EventHandlerType; }
 		}
 
-		internal override bool IsPublic
+        protected internal override bool IsPublic
 		{
 			get { return eventInfo.IsPublic; }
 		}
 
-		internal override bool IsNonPrivate
+        protected internal override bool IsNonPrivate
 		{
 			get { return eventInfo.IsNonPrivate; }
 		}
 
-		internal override bool IsStatic
+        protected internal override bool IsStatic
 		{
 			get { return eventInfo.IsStatic; }
 		}
@@ -224,12 +224,12 @@ namespace IKVM.Reflection
 			get { return eventInfo.Name; }
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return eventInfo.IsBaked; }
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			return eventInfo.GetCurrentToken();
 		}

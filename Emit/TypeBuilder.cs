@@ -228,7 +228,7 @@ namespace IKVM.Reflection.Emit
 			}
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			if (this.ModuleBuilder.IsSaved)
 			{
@@ -240,7 +240,7 @@ namespace IKVM.Reflection.Emit
 			}
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return ((MemberInfo)type ?? method).IsBaked; }
 		}
@@ -1095,7 +1095,7 @@ namespace IKVM.Reflection.Emit
 			get { return token == 0x02000001; }
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return IsCreated(); }
 		}
@@ -1234,7 +1234,7 @@ namespace IKVM.Reflection.Emit
 			return underlyingType.GetModuleBuilderToken();
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return true; }
 		}

@@ -27,8 +27,7 @@ namespace IKVM.Reflection
 {
 	public abstract class MethodBase : MemberInfo
 	{
-		// prevent external subclasses
-		internal MethodBase()
+		public MethodBase()
 		{
 		}
 

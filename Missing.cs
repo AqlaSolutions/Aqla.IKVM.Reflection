@@ -551,7 +551,7 @@ namespace IKVM.Reflection
 			return this;
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { throw new MissingMemberException(this); }
 		}
@@ -605,7 +605,7 @@ namespace IKVM.Reflection
 			}
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return owner.IsBaked; }
 		}
@@ -913,12 +913,12 @@ namespace IKVM.Reflection
 			get { return Forwarder.MetadataToken; }
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			return Forwarder.GetCurrentToken();
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return Forwarder.IsBaked; }
 		}
@@ -1054,12 +1054,12 @@ namespace IKVM.Reflection
 			return this.FieldType.Name + " " + this.Name;
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			return Forwarder.GetCurrentToken();
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return Forwarder.IsBaked; }
 		}
@@ -1149,12 +1149,12 @@ namespace IKVM.Reflection
 			get { return declaringType.Module; }
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return declaringType.IsBaked; }
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			throw new MissingMemberException(this);
 		}

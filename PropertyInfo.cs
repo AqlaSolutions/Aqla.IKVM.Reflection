@@ -28,8 +28,7 @@ namespace IKVM.Reflection
 {
 	public abstract class PropertyInfo : MemberInfo
 	{
-		// prevent external subclasses
-		internal PropertyInfo()
+		public PropertyInfo()
 		{
 		}
 
@@ -332,12 +331,12 @@ namespace IKVM.Reflection
 			get { return property.Name; }
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return property.IsBaked; }
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			return property.GetCurrentToken();
 		}

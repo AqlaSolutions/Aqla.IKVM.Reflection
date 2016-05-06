@@ -706,7 +706,7 @@ namespace IKVM.Reflection.Emit
 			typeBuilder.CheckBaked();
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			if (typeBuilder.ModuleBuilder.IsSaved)
 			{
@@ -718,7 +718,7 @@ namespace IKVM.Reflection.Emit
 			}
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return typeBuilder.IsBaked; }
 		}

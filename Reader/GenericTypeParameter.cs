@@ -296,7 +296,7 @@ namespace IKVM.Reflection.Reader
 			return binder.BindMethodParameter(this);
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { throw new InvalidOperationException(); }
 		}
@@ -395,7 +395,7 @@ namespace IKVM.Reflection.Reader
 			}
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return true; }
 		}

@@ -63,9 +63,8 @@ namespace IKVM.Reflection
 			PotentialEnumOrValueType = 32,
 			EnumOrValueType = 64,
 		}
-
-		// prevent subclassing by outsiders
-		internal Type()
+        
+		public Type()
 		{
 			this.underlyingType = this;
 		}
@@ -1936,7 +1935,7 @@ namespace IKVM.Reflection
 			throw new InvalidOperationException();
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			return this.MetadataToken;
 		}
@@ -2064,12 +2063,12 @@ namespace IKVM.Reflection
 			get { return elementType.Universe; }
 		}
 
-		internal sealed override bool IsBaked
+        protected internal sealed override bool IsBaked
 		{
 			get { return elementType.IsBaked; }
 		}
 
-		internal sealed override int GetCurrentToken()
+        protected internal sealed override int GetCurrentToken()
 		{
 			// we don't have a token, so we return 0 (which is never a valid token)
 			return 0;
@@ -2840,12 +2839,12 @@ namespace IKVM.Reflection
 			return this;
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			return type.GetCurrentToken();
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return type.IsBaked; }
 		}
@@ -2925,7 +2924,7 @@ namespace IKVM.Reflection
 			return "<FunctionPtr>";
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return true; }
 		}
@@ -2971,7 +2970,7 @@ namespace IKVM.Reflection
 			get { throw new InvalidOperationException(); }
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { throw new InvalidOperationException(); }
 		}

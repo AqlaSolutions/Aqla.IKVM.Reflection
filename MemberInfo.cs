@@ -33,8 +33,7 @@ namespace IKVM.Reflection
 #pragma warning disable 660, 661
 	public abstract class MemberInfo : ICustomAttributeProvider
 	{
-		// prevent external subclasses
-		internal MemberInfo()
+		public MemberInfo()
 		{
 		}
 
@@ -84,11 +83,11 @@ namespace IKVM.Reflection
 			return !(m1 == m2);
 		}
 
-		internal abstract int GetCurrentToken();
+	    protected internal abstract int GetCurrentToken();
 
 		internal abstract List<CustomAttributeData> GetPseudoCustomAttributes(Type attributeType);
 
-		internal abstract bool IsBaked { get; }
+	    protected internal abstract bool IsBaked { get; }
 
 		internal virtual bool BindingFlagsMatch(BindingFlags flags)
 		{

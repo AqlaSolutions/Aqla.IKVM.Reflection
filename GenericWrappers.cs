@@ -267,12 +267,12 @@ namespace IKVM.Reflection
 			return methods;
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			return method.GetCurrentToken();
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return method.IsBaked; }
 		}
@@ -365,12 +365,12 @@ namespace IKVM.Reflection
 			return new GenericFieldInstance(declaringType.BindTypeParameters(type), field);
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			return field.GetCurrentToken();
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return field.IsBaked; }
 		}
@@ -554,12 +554,12 @@ namespace IKVM.Reflection
 			return new GenericPropertyInfo(typeInstance.BindTypeParameters(type), property);
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return property.IsBaked; }
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			return property.GetCurrentToken();
 		}
@@ -666,27 +666,27 @@ namespace IKVM.Reflection
 			return new GenericEventInfo(typeInstance.BindTypeParameters(type), eventInfo);
 		}
 
-		internal override bool IsPublic
+        protected internal override bool IsPublic
 		{
 			get { return eventInfo.IsPublic; }
 		}
 
-		internal override bool IsNonPrivate
+        protected internal override bool IsNonPrivate
 		{
 			get { return eventInfo.IsNonPrivate; }
 		}
 
-		internal override bool IsStatic
+        protected internal override bool IsStatic
 		{
 			get { return eventInfo.IsStatic; }
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return eventInfo.IsBaked; }
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			return eventInfo.GetCurrentToken();
 		}

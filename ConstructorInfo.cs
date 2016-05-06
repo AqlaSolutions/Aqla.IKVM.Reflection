@@ -139,7 +139,7 @@ namespace IKVM.Reflection
 			return new ConstructorInfoWithReflectedType(type, this);
 		}
 
-		internal sealed override int GetCurrentToken()
+        protected internal sealed override int GetCurrentToken()
 		{
 			return GetMethodInfo().GetCurrentToken();
 		}
@@ -149,7 +149,7 @@ namespace IKVM.Reflection
 			return GetMethodInfo().GetPseudoCustomAttributes(attributeType);
 		}
 
-		internal sealed override bool IsBaked
+        protected internal sealed override bool IsBaked
 		{
 			get { return GetMethodInfo().IsBaked; }
 		}

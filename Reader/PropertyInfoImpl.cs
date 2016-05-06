@@ -166,12 +166,12 @@ namespace IKVM.Reflection.Reader
 			flagsCached = true;
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return true; }
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			return this.MetadataToken;
 		}

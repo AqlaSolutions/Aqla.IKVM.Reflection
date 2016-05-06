@@ -123,12 +123,12 @@ namespace IKVM.Reflection.Reader
 			return module.ImportMethodOrField(declaringType, this.Name, this.FieldSignature);
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			return this.MetadataToken;
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return true; }
 		}

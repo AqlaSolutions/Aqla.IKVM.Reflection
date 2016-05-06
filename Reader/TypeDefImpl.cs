@@ -408,7 +408,7 @@ namespace IKVM.Reflection.Reader
 			get { return index == 0; }
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return true; }
 		}

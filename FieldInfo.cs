@@ -29,8 +29,7 @@ namespace IKVM.Reflection
 {
 	public abstract class FieldInfo : MemberInfo
 	{
-		// prevent external subclasses
-		internal FieldInfo()
+		public FieldInfo()
 		{
 		}
 
@@ -291,12 +290,12 @@ namespace IKVM.Reflection
 			return field.ToString();
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			return field.GetCurrentToken();
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return field.IsBaked; }
 		}

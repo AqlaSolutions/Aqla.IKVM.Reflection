@@ -111,7 +111,7 @@ namespace IKVM.Reflection.Emit
 			return fieldBuilder.FieldType;
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return typeBuilder.IsBaked; }
 		}

@@ -216,7 +216,7 @@ namespace IKVM.Reflection.Emit
 			typeBuilder.ModuleBuilder.MethodSemantics.AddRecord(rec);
 		}
 
-		internal override bool IsPublic
+        protected internal override bool IsPublic
 		{
 			get
 			{
@@ -231,7 +231,7 @@ namespace IKVM.Reflection.Emit
 			}
 		}
 
-		internal override bool IsNonPrivate
+        protected internal override bool IsNonPrivate
 		{
 			get
 			{
@@ -246,7 +246,7 @@ namespace IKVM.Reflection.Emit
 			}
 		}
 
-		internal override bool IsStatic
+        protected internal override bool IsStatic
 		{
 			get
 			{
@@ -261,12 +261,12 @@ namespace IKVM.Reflection.Emit
 			}
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return typeBuilder.IsBaked; }
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			if (typeBuilder.ModuleBuilder.IsSaved && typeBuilder.ModuleBuilder.IsPseudoToken(lazyPseudoToken))
 			{

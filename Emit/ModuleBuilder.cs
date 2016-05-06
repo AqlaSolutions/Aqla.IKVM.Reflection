@@ -1869,12 +1869,12 @@ namespace IKVM.Reflection.Emit
 			get { return (callingConvention & (CallingConventions.HasThis | CallingConventions.ExplicitThis)) == CallingConventions.HasThis; }
 		}
 
-		internal override int GetCurrentToken()
+        protected internal override int GetCurrentToken()
 		{
 			return this.MetadataToken;
 		}
 
-		internal override bool IsBaked
+        protected internal override bool IsBaked
 		{
 			get { return arrayClass.IsBaked; }
 		}
